@@ -166,26 +166,26 @@ void FindMinMaxDigitSum()
         sums[i] = DigitSum(numbers[i]);
     }
 
-    int min_sum = sums[0], max_sum = sums[0];
-    int min_idx = 0, max_idx = 0;
+    int minSum = sums[0], maxSum = sums[0];
+    int minIdx = 0, maxIdx = 0;
 
     for (int i = 1; i < n; ++i) 
     {
-        if (sums[i] < min_sum) 
+        if (sums[i] < minSum) 
         {
-            min_sum = sums[i];
-            min_idx = i;
+            minSum = sums[i];
+            minIdx = i;
         }
 
-        if (sums[i] > max_sum) 
+        if (sums[i] > maxSum) 
         {
-            max_sum = sums[i];
-            max_idx = i;
+            maxSum = sums[i];
+            maxIdx = i;
         }
     }
 
-    cout << "Число с наименьшей суммой цифр (" << min_sum << "): " << numbers[min_idx] << endl;
-    cout << "Число с наибольшей суммой цифр (" << max_sum << "): " << numbers[max_idx] << endl;
+    cout << "Число с наименьшей суммой цифр (" << minSum << "): " << numbers[minIdx] << endl;
+    cout << "Число с наибольшей суммой цифр (" << maxSum << "): " << numbers[maxIdx] << endl;
 }
 
 void Run3Task() 
